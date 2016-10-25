@@ -30,7 +30,7 @@ faces = faceCascade.detectMultiScale(grayImg, 1.05, 5)
 print("Detected " + str(len(faces)) + " faces in captured image.")
 
 for (x,y,w,h) in faces:
-    caption = str(w + " x " + h);
+    caption = str(w + " x " + h)
     cv2.rectangle(img,(x,y),(x+w,y+h),(100,0,255),1)
     cv2.putText(img, caption, (x+w,y+h), font, 1, (255,255,255),2,cv2.LINE_AA)
     r_eyes = img[y:y+h, x:x+w]
