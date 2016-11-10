@@ -11,7 +11,7 @@ thickness =1;
 
 with pic.PiCamera() as cam:
     cam.resolution = (800, 600)
-    cam.caputre(memStream, format='jpeg')
+    cam.capture(memStream, format='jpeg')
 
 buff = np.fromstring(stream.getvalue(), dtype=np.uint8)
 
